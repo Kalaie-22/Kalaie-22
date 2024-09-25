@@ -28,15 +28,18 @@ CREATE TABLE scores (
     submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (quiz_id) REFERENCES quizzes(id) ON DELETE CASCADE
 );
+
 INSERT INTO quizzes (quiz_title, description) 
 VALUES ('General Knowledge', 'Test your general knowledge skills!'),
        ('Science Quiz', 'A quiz to test basic science knowledge.');
+       
 INSERT INTO questions (quiz_id, question_text, option_a, option_b, option_c, option_d, correct_option)
 VALUES
     (1, 'What is the capital of France?', 'Berlin', 'Madrid', 'Paris', 'Rome', 'c'),
     (1, 'Which planet is known as the Red Planet?', 'Earth', 'Mars', 'Jupiter', 'Venus', 'b'),
     (2, 'What is the chemical symbol for water?', 'H2O', 'CO2', 'NaCl', 'O2', 'a'),
     (2, 'What is the speed of light?', '299,792 km/s', '150,000 km/s', '1,000 km/s', '300,000 km/s', 'a');
+    
 INSERT INTO scores (user_name, quiz_id, score)
 VALUES
     ('Alice', 1, 4),
