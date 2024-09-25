@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(190, 110, 4);
+}
+
+*{
+    background-color: #007bff !important; /* Forces the button color */
+}
+
+.form-check-input[type=radio] {
+    border-radius: 50%;
+    border-color: black;
+}
